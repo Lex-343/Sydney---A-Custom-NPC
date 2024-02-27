@@ -1,0 +1,23 @@
+{
+  "Name": "Sydney - A Custom NPC",
+  "Author": "Lex",
+  "Description": "This mod adds a new NPC into the game named Sydney.",
+  "Version": "1.1.1",
+  "UniqueID": "Lex.Sydney",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": [ "Nexus:14158" ],
+
+  "Dependencies": [
+		{
+   	"UniqueID": "DaisyNiko.EarthyRecolour",
+   	"IsRequired": false,
+ 			},
+		{
+  	"UniqueID": "FlashShifter.StardewValleyExpandedCP",
+  	"IsRequired": false,
+		},
+	],
+  "ContentPackFor": {
+  "UniqueID": "Pathoschild.ContentPatcher"
+  	}
+}
