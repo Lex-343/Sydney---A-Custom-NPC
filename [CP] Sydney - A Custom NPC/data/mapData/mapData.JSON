@@ -1,0 +1,146 @@
+{
+	"Changes": [
+	//Loads Custom Tilesheets
+	{
+		"LogName": "Custom Tilesheets Load",
+          	"Action": "Load",
+          	"Target": "Maps/Z_Sydney_House_Fall, Maps/Z_Sydney_House, Maps/Z_Sydney_House_winter, Maps/Z_Sydney_House_Fall_ERC, Maps/Z_Sydney_House_ERC, Maps/Z_Sydney_House_winter_ERC, Maps/z_Sydney_furniture, Maps/z_Sydney_townInterior, Maps/z_Sydney_walls_and_floors",
+          	"FromFile": "assets/tileSheets/{{TargetWithoutPath}}.png"
+     	},
+
+	//Loads Custom Maps
+	{
+	    	"Action": "Load",
+	    	"Target": "Maps/Custom_sydBeach",
+	    	"FromFile": "assets/maps/Custom_sydBeach.tmx"
+	},
+
+	{
+	    	"Action": "Load",
+	    	"Target": "Maps/Custom_sydHouse",
+	    	"FromFile": "assets/maps/Custom_sydHouse.tmx"
+	},
+
+	{
+	    	"Action": "Load",
+	    	"Target": "Maps/Sydney_SpouseRoom",
+	    	"FromFile": "assets/maps/Sydney_SpouseRoom.tmx"
+	},
+
+      	{
+          	"Action": "Load",
+          	"Target": "Maps/Sydney_SpousePatio",
+          	"FromFile": "assets/maps/Sydney_Patio.tmx"
+	},	
+	
+	//Adds Custom Location Data
+	{
+		"LogName": "Custom Beach Data",
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": {
+			"Lex.Sydney_sydBeach": {
+				"DisplayName": "{{i18n:Location.sydBeach}}",
+				"DefaultArrivalTile": { "X": 23, "Y": 12, },
+					
+				"CreateOnLoad": { 
+					"MapPath": "Maps/Custom_sydBeach",
+					"AlwaysActive": true,
+					},
+	
+				"Fish": [
+				{
+					"ID": "Lex.Sydney_Fish",
+					"ItemId": "LOCATION_FISH Beach BOBBER_X BOBBER_Y WATER_DEPTH"
+					}
+				]
+			}
+		}
+	},
+
+	{
+		"LogName": "Custom House Data",
+		"Action": "EditData",
+		"Target": "Data/Locations",
+		"Entries": {
+			"Lex.Sydney_sydHouse": {
+				"DisplayName": "{{i18n:Location.sydHouse}}",
+				"DefaultArrivalTile": { "X": 8, "Y": 24, },
+					
+				"CreateOnLoad": { 
+					"MapPath": "Maps/Custom_sydHouse",
+					"AlwaysActive": true,
+				}
+			}
+		}
+	},
+
+	//Beach & Forest Vanilla Warps
+	{
+		"Action": "EditMap",
+		"Target": "maps/Beach",
+		"MapProperties": {
+			"Warp": "38 -1 Town 54 108 39 -1 Town 54 108 40 -1 Town 54 108 67 -1 Town 94 109 -1 4 Lex.Sydney_sydBeach 43 5 -1 5 Lex.Sydney_sydBeach 43 5 -1 6 Lex.Sydney_sydBeach 43 5 -1 7 Lex.Sydney_sydBeach 43 5 -1 8 Lex.Sydney_sydBeach 43 5 -1 9 Lex.Sydney_sydBeach 43 5",
+				},
+		"When": {
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"
+		}
+	},
+
+	{
+		"Action": "EditMap",
+		"Target": "maps/Forest",
+		"MapProperties": {
+			"Warp": "120 25 Town 0 90 120 26 Town 0 90 120 24 Town 0 90 120 27 Town 0 90 67 -1 Farm 41 64 68 -1 Farm 41 64 69 -1 Farm 41 64 -1 6 Woods 59 15 -1 7 Woods 59 15 70 -1 Farm 41 64 71 -1 Farm 41 64 72 -1 Farm 41 64 120 33 Lex.Sydney_sydBeach 0 5 120 34 Lex.Sydney_sydBeach 0 5 120 35 Lex.Sydney_sydBeach 0 6 120 36 Lex.Sydney_sydBeach 0 6",
+				},
+		"When": {
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"
+		}
+	},
+
+	//Beach & Forest Clutter Removal 
+	{
+		"Action": "EditMap",
+		"Target": "maps/Beach",
+		"FromFile": "assets/maps/Custom_beachClutter.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 12, "Height": 10, },
+		"ToArea": { "X": 0, "Y": 0, "Width": 12, "Height": 10, },
+		"When": {
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"
+		}
+	},
+
+	{
+		"Action": "EditMap",
+		"Target": "maps/Forest",
+		"FromFile": "assets/maps/Custom_forestClutter.tmx",
+		"FromArea": { "X": 0, "Y": 0, "Width": 5, "Height": 8, },
+		"ToArea": { "X": 115, "Y": 31, "Width": 5, "Height": 8, },
+		"When": {
+			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"
+		}
+	},
+
+	//Seasonal Changes Vanilla
+	{
+		"Action": "EditImage",
+		"Target": "maps/Z_Sydney_House",
+		"FromFile": "assets/Tilesheets/Z_Sydney_House_fall.png",
+		"When": {
+			"season": "fall",
+			"HasMod |contains=DaisyNiko.EarthyRecolour": "false"
+		}
+	},
+
+	{
+		"Action": "EditImage",
+		"Target": "maps/Z_Sydney_House",
+		"FromFile": "assets/Tilesheets/Z_Sydney_House_winter.png",
+		"When": {
+			"season": "winter",
+			"HasMod |contains=DaisyNiko.EarthyRecolour": "false"
+			}
+		}
+	]
+}
+
