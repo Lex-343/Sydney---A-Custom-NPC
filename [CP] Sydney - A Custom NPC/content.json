@@ -1,77 +1,67 @@
 {
- 	"Format": "2.0.0",
+	"Format": "2.0.0",
 	//If you have any questions just ping me in discord in #making-mods or something. Good luck with whatever it is that you're doing!
-
 	"DynamicTokens": [
-      	{
-         	"Name": "Lex.Sydney",
-         	"Value": "Lex.Sydney"
-      		}
+		{
+			"Name": "Lex.Sydney",
+			"Value": "Lex.Sydney"
+		}
 	],
-
-  	"Changes": [
-	//Loading empty jsons to edit for events at custom locations
-	{
-	    	"Action": "Load",
-	    	"Target": "Data/Events/Lex.Sydney_sydBeach",
-	    	"FromFile": "data/events/sydBeachEvents.json"
-	},
-
-	{
-	    	"Action": "Load",
-	    	"Target": "Data/Events/Lex.Sydney_sydHouse",
-	    	"FromFile": "data/events/sydHouseEvents.json"
-	},
-
-  	//Map Data Inclusion		
-      	{
-	   	"LogName": "Map Data Inclusion",
-         	"Action": "Include",
-         	"FromFile": "data/MapData/mapData.json"
-	},
-
-	//Compatibility Data Inclusions
-	{
-		"LogName": "Earthy Recolour Compatibility",
-		"Action": "Include",
-		"FromFile": "data/compatibility/earthyRecolour.json",
-		"When": {
-			"HasMod |contains=DaisyNiko.EarthyRecolour": "true"
+	"Changes": [
+		//Loading empty jsons to edit for events at custom locations
+		{
+			"Action": "Load",
+			"Target": "Data/Events/Lex.Sydney_sydBeach",
+			"FromFile": "data/events/sydBeachEvents.json"
+		},
+		{
+			"Action": "Load",
+			"Target": "Data/Events/Lex.Sydney_sydHouse",
+			"FromFile": "data/events/sydHouseEvents.json"
+		},
+		//Map Data Inclusion		
+		{
+			"LogName": "Map Data Inclusion",
+			"Action": "Include",
+			"FromFile": "data/MapData/mapData.json"
+		},
+		//Compatibility Data Inclusions
+		{
+			"LogName": "Earthy Recolour Compatibility",
+			"Action": "Include",
+			"FromFile": "data/compatibility/earthyRecolour.json",
+			"When": {
+				"HasMod |contains=DaisyNiko.EarthyRecolour": "true"
+			}
+		},
+		{
+			"LogName": "SVE Compatibility",
+			"Action": "Include",
+			"FromFile": "data/compatibility/SVE.json",
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "true"
+			}
+		},
+		//NPC Data Inclusion
+		{
+			"LogName": "NPC Inclusion",
+			"Action": "Include",
+			"FromFile": "data/characterData/sydneyData.json"
+		},
+		{
+			"LogName": "Mail Inclusion",
+			"Action": "Include",
+			"FromFile": "data/characterData/mail/mail.json"
+		},
+		{
+			"LogName": "Festival Data Inclusion",
+			"Action": "Include",
+			"FromFile": "data/events/festivalData.json"
+		},
+		{
+			"LogName": "Heart Event Data Inclusion",
+			"Action": "Include",
+			"FromFile": "data/events/heartEvents.json"
 		}
-	},
-
-	{
-		"LogName": "SVE Compatibility",
-		"Action": "Include",
-		"FromFile": "data/compatibility/SVE.json",
-		"When": {
-			"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "true"
-		}
-	},
-
-	//NPC Data Inclusion
-	{
-	   	"LogName": "NPC Inclusion",
-         	"Action": "Include",
-         	"FromFile": "data/characterData/sydneyData.json"
-      	},
-
-	{
-		"LogName": "Mail Inclusion",
-		"Action": "Include",
-		"FromFile": "data/characterData/mail/mail.json"
-	},
-
-	{
-	    	"LogName": "Festival Data Inclusion",
-	    	"Action": "Include",
-	    	"FromFile": "data/events/festivalData.json"
-	},
-	
-	{
-	    	"LogName": "Heart Event Data Inclusion",
-	    	"Action": "Include",
-	    	"FromFile": "data/events/heartEvents.json"
-		}
-   	]
+	]
 }

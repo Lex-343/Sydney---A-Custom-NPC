@@ -92,7 +92,6 @@
 	    	"LogName": "Sydney Animation Data",
 	    	"Action": "EditData",
           	"Target": "Data/animationdescriptions",
-	    	"Update": "OnTimeChange",
 	    	"Entries": {
 			"Sydney_lex_notes": "16/16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 17 17 18 17 18 17 18 17 18 17 18 17 18 17 18 17 18 16 16 16 16 16 16 16 16 17 18 17 18 17 18 17 18 17 18/16"
 		}
