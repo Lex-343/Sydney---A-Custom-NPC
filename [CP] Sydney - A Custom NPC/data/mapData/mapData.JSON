@@ -37,11 +37,11 @@
 					"DisplayName": "{{i18n:Location.sydBeach}}",
 					"DefaultArrivalTile": {
 						"X": 23,
-						"Y": 12,
+						"Y": 12
 					},
 					"CreateOnLoad": {
 						"MapPath": "Maps/Custom_sydBeach",
-						"AlwaysActive": true,
+						"AlwaysActive": true
 					},
 					"Fish": [
 						{
@@ -61,11 +61,11 @@
 					"DisplayName": "{{i18n:Location.sydHouse}}",
 					"DefaultArrivalTile": {
 						"X": 8,
-						"Y": 24,
+						"Y": 24
 					},
 					"CreateOnLoad": {
 						"MapPath": "Maps/Custom_sydHouse",
-						"AlwaysActive": true,
+						"AlwaysActive": true
 					}
 				}
 			}
@@ -75,7 +75,7 @@
 			"Action": "EditMap",
 			"Target": "maps/Beach",
 			"MapProperties": {
-				"Warp": "38 -1 Town 54 108 39 -1 Town 54 108 40 -1 Town 54 108 67 -1 Town 94 109 -1 4 Lex.Sydney_sydBeach 43 5 -1 5 Lex.Sydney_sydBeach 43 5 -1 6 Lex.Sydney_sydBeach 43 5 -1 7 Lex.Sydney_sydBeach 43 5 -1 8 Lex.Sydney_sydBeach 43 5 -1 9 Lex.Sydney_sydBeach 43 5",
+				"Warp": "38 -1 Town 54 108 39 -1 Town 54 108 40 -1 Town 54 108 67 -1 Town 94 109 -1 4 Lex.Sydney_sydBeach 43 5 -1 5 Lex.Sydney_sydBeach 43 5 -1 6 Lex.Sydney_sydBeach 43 5 -1 7 Lex.Sydney_sydBeach 43 5 -1 8 Lex.Sydney_sydBeach 43 5 -1 9 Lex.Sydney_sydBeach 43 5"
 			},
 			"When": {
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"
@@ -85,7 +85,7 @@
 			"Action": "EditMap",
 			"Target": "maps/Forest",
 			"MapProperties": {
-				"Warp": "120 25 Town 0 90 120 26 Town 0 90 120 24 Town 0 90 120 27 Town 0 90 67 -1 Farm 41 64 68 -1 Farm 41 64 69 -1 Farm 41 64 -1 6 Woods 59 15 -1 7 Woods 59 15 70 -1 Farm 41 64 71 -1 Farm 41 64 72 -1 Farm 41 64 120 33 Lex.Sydney_sydBeach 0 5 120 34 Lex.Sydney_sydBeach 0 5 120 35 Lex.Sydney_sydBeach 0 6 120 36 Lex.Sydney_sydBeach 0 6",
+				"Warp": "120 25 Town 0 90 120 26 Town 0 90 120 24 Town 0 90 120 27 Town 0 90 67 -1 Farm 41 64 68 -1 Farm 41 64 69 -1 Farm 41 64 -1 6 Woods 59 15 -1 7 Woods 59 15 70 -1 Farm 41 64 71 -1 Farm 41 64 72 -1 Farm 41 64 120 33 Lex.Sydney_sydBeach 0 5 120 34 Lex.Sydney_sydBeach 0 5 120 35 Lex.Sydney_sydBeach 0 6 120 36 Lex.Sydney_sydBeach 0 6"
 			},
 			"When": {
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"
@@ -100,13 +100,13 @@
 				"X": 0,
 				"Y": 0,
 				"Width": 12,
-				"Height": 10,
+				"Height": 10
 			},
 			"ToArea": {
 				"X": 0,
 				"Y": 0,
 				"Width": 12,
-				"Height": 10,
+				"Height": 10
 			},
 			"When": {
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"
@@ -120,13 +120,13 @@
 				"X": 0,
 				"Y": 0,
 				"Width": 5,
-				"Height": 8,
+				"Height": 8
 			},
 			"ToArea": {
 				"X": 115,
 				"Y": 31,
 				"Width": 5,
-				"Height": 8,
+				"Height": 8
 			},
 			"When": {
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"

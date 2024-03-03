@@ -5,19 +5,20 @@
   "Version": "1.1.1",
   "UniqueID": "Lex.Sydney",
   "MinimumApiVersion": "3.0.0",
-  "UpdateKeys": [ "Nexus:14158" ],
-
+  "UpdateKeys": [
+    "Nexus:14158"
+  ],
   "Dependencies": [
-		{
-   	"UniqueID": "DaisyNiko.EarthyRecolour",
-   	"IsRequired": false,
- 			},
-		{
-  	"UniqueID": "FlashShifter.StardewValleyExpandedCP",
-  	"IsRequired": false,
-		},
-	],
+    {
+      "UniqueID": "DaisyNiko.EarthyRecolour",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "FlashShifter.StardewValleyExpandedCP",
+      "IsRequired": false
+    }
+  ],
   "ContentPackFor": {
-  "UniqueID": "Pathoschild.ContentPatcher"
-  	}
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
 }

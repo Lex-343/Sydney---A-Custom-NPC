@@ -1,397 +1,374 @@
 {
 	"Changes": [
-	//Basic NPC initialization
-	{
-		"LogName": "Character Initialization",
-         	"Action": "EditData",
-         	"Target": "Data/Characters",
-         	"Entries": {
-              		"Lex.Sydney_Sydney": {
-				"DisplayName": "{{i18n:DisplayName.Sydney}}",
-				"Manner": "Polite",
-				"SocialAnxiety": "Shy",
-				"Optimism": "Negative",
-				"BirthSeason": "summer",
-				"BirthDay": 27,
-				"HomeRegion": "Town",
-				"CanBeRomanced": true,
-				"SpouseAdopts": true,
-
-				"SpouseRoom": {
-					"MapAsset": "Lex.Sydney_SpouseRoom"
-				},
-
-				"SpousePatio": {
-					"MapAsset": "Lex.Sydney_SpousePatio"
-				},
-
-				"WinterStarGifts": [
-				{
-					"RandomItemID": [ "(O)341, (O)921, (O)156, (O)645, (O)787, (O)433, (O)499" ],
-					}
-				],
-				
-				"Home": [
-				{
-					"ID": "Lex.Sydney_Home",
-					"Location": "Lex.Sydney_sydHouse",
-					"Tile": { "X": 13, "Y": 11, },
-					"Direction": "Right"
-					}
-				]
-			}
-           	}
-      	},
-
-	{
-	   	"LogName": "Gift Taste Data",
-         	"Action": "EditData",
-         	"Target": "Data/NPCGiftTastes",
-         	"Entries": {
-               		"Lex.Sydney_Sydney": "{{i18n:Gift.Taste.Love}}/797 212 921 905 156 610/{{i18n:Gift.Taste.Like}}/149 348 342 227 228 242 62 66 88 394 787 154 155 834/{{i18n:Gift.Taste.Dislike}}/216 238 257 18 22 393/{{i18n:Gift.Taste.Hate}}/307 330 16 416 459 270 271 152 220 420/{{i18n:Gift.Taste.Neutral}}/143/"
-          		}
-      	},
-
-	//NPC Image Asset Initialization
-	{
-	   	"Action": "Load",
-	   	"Target": "Characters/Lex.Sydney_Sydney",
-	   	"FromFile": "assets/CharacterFiles/OverworldSprites/Sydney_Sprites.png"
-	},
-
-	{
-	   	"Action": "Load",
-	   	"Target": "Portraits/Lex.Sydney_Sydney",
-	   	"FromFile": "assets/characterFiles/portraits/Sydney_Portraits.png"
-	},
-
-	{
-	   	"Action": "EditImage",
-	   	"Target": "Characters/Lex.Sydney_Sydney",
-	   	"FromFile": "assets/characterFiles/overworldSprites/Sydney_Sprites_Flower.png",
-	   	"When": { 
-			"DayEvent": "flower dance",
-			"LocationName": "Forest, temp"
-				},
-	   	"Update": "OnLocationChange"			
-	},
-	
-	{
-	   	"Action": "EditImage",
-	   	"Target": "Characters/Lex.Sydney_Sydney",
-	   	"FromFile": "assets/characterFiles/overworldSprites/Sydney_Sprites_Spirit.png",
-	   	"When": { 
-			"DayEvent": "spirit's eve",
-			"LocationName": "Town, temp"
-				},
-	   	"Update": "OnLocationChange"			
-	},
-
-	//Animations
-	{
-	    	"LogName": "Sydney Animation Data",
-	    	"Action": "EditData",
-          	"Target": "Data/animationdescriptions",
-	    	"Entries": {
-			"Sydney_lex_notes": "16/16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 17 17 18 17 18 17 18 17 18 17 18 17 18 17 18 17 18 16 16 16 16 16 16 16 16 17 18 17 18 17 18 17 18 17 18/16"
-		}
-	},
-
-	//Dialogue & Schedule Initialization
-	{
-	    	"Action": "Load",
-          	"Target": "Characters/Dialogue/Lex.Sydney_Sydney",
-          	"FromFile": "data/characterData/dialogue/dialogue.json"
-      	},
-
-      	{
-          	"Action": "Load",
-          	"Target": "Characters/Dialogue/MarriageDialogueSydney",
-          	"FromFile": "data/characterData/dialogue/marriageDialogue.json"
-      	},
-
-      	{
-	    	"LogName": "Sydney Schedule Load",
-          	"Action": "Load",
-          	"Target": "Characters/Schedules/Lex.Sydney_Sydney",
-         	"FromFile": "data/characterData/schedule/schedule.json"
-      	},
-	
-	//Dialogue Adjustments 
-	{
-		"Action": "EditData",
-		"Target": "Characters/Dialogue/Lex.Sydney_Sydney",
-		"Entries": {
-			"summer_19": "{{i18n:dialogue.adjustment.summer_19}}",
-  			"summer_20": "{{i18n:dialogue.adjustment.summer_20}}"
-				},
-		"When":  {
-			"HasSeenEvent": "Lex.Sydney_Heart6"
-		}
-	},
-
-	{
-		"Action": "EditData",
-		"Target": "Characters/Dialogue/Lex.Sydney_Sydney",
-		"Entries": {
-			"Saloon8": "{{i18n:dialogue.adjustment.saloon8}}"
-				},
-		"When":  {
-			"Relationship:Lex.Sydney_Sydney": "Dating, Engaged"
-		}
-	},
-
-	//Wedding & Marriage Data
-	{
-	    	"LogName": "Sydney Wedding Data",
-          	"Action": "EditData",
-          	"Target": "strings/StringsFromCSFiles",
-          	"Entries": {
-        		"Utility.cs.5367": "{{i18n:wedding.5367}}",
-        		"Utility.cs.5369": "{{i18n:wedding.5369}}",
-			"Utility.cs.5371": "{{i18n:wedding.5371}}",
-        		"Utility.cs.5377": "{{i18n:wedding.5377}}"
-      				},
-		"When": {
-         		"Relationship:Lex.Sydney_Sydney": "Engaged"
-      		}
-    	},
-	
-      	{
-	     	"LogName": "Sydney Engagement Dialogue Data",
-		"Action": "EditData",
-           	"Target": "Data/EngagementDialogue",
-           	"Entries": {
-              		"Lex.Sydney_Sydney0": "{{i18n:engagement.00}}",
-              		"Lex.Sydney_Sydney1": "{{i18n:engagement.01}}"
-            	}
-	},
-
-	{
-	    	"LogName": "Sydney Pregnancy/Adoption Dialogue Data One",
-          	"Action": "EditData",
-          	"Target": "strings/StringsFromCSFiles",
-          	"Entries": {
-			"NPC.cs.4440": "{{i18n:Sydney_Pregnancy_Adoption_One.4440}}",
-			"NPC.cs.4443": "{{i18n:Sydney_Pregnancy_Adoption_One.4443}}",
-			"NPC.cs.4445": "{{i18n:Sydney_Pregnancy_Adoption_One.4445}}"
-      				},
-		"When": {
-         		"Relationship:Lex.Sydney_Sydney": "Married",
-			"HavingChild": "{{spouse}}"
-      		}
-    	},
-
-	//Movie Concession Data
-	{
-	    	"LogName": "Sydney Concession Data",
-    	    	"Action": "EditData",
-          	"Target": "Data/ConcessionTastes",
-          	"Entries": {
-			"Lex.Sydney_Sydney": {
-          			"Name": "Sydney",
-          			"LovedTags": [
-      					"Salty", 
-					"Sour", 
-					"Nachos",
-					"Salted Peanuts"
-    					],
-
-           			"LikedTags": [
-            				"Drink", 
-	      				"popcorn",
-					"Personal Pizza"
-    					],
-
-            			"DislikedTags": [
-            				"Burger",
-            				"Candy",
-	      				"Ice Cream Sandwich",
-	      				"Black Licorice"
-    				]
-      			}
-     		}
-	},
-	
-	//Movie Reaction Data
-	{
-	      	"LogName": "Sydney Movie Reaction Data",
-    		"Action": "EditData",
-    		"Target": "Data/MoviesReactions",
-    			"Entries": {
-    				"Lex.Sydney_Sydney": {
-    					"NPCName": "Sydney",
-    					"Reactions": [
-      						{
-        		   			"Tag": "sci-fi",
-        		   			"Response": "like",
-        		   			"Whitelist": [],
-        		   			"SpecialResponses": {
-        		   				"BeforeMovie": {
-          		  					"ResponsePoint": null,
-          							"Script": "",
-          							"Text": "{{i18n:Movie.SciFi.start}}",
-        							},
-        		   				"DuringMovie": {
-          		   					"ResponsePoint": null,
-          		   					"Script": "",
-          		   					"Text": "{{i18n:Movie.SciFi.script}}",
-        							},
-        		   				"AfterMovie": {
-          		   					"ResponsePoint": null,
-          		   					"Script": "",
-          		   					"Text": "{{i18n:Movie.SciFi.end}}"
-        							},
-							"ID": "reaction_0"
-      							}
-      						},
-
-      						{
-        		   			"Tag": "horror",
-        		   			"Response": "love",
-        		   			"Whitelist": [],
-        		   			"SpecialResponses": {
-        		   				"BeforeMovie": {
-          							"ResponsePoint": null,
-          							"Script": "",
-          							"Text": "{{i18n:Movie.Horror.start}}",
-        							},
-        						"DuringMovie": {
-          							"ResponsePoint": null,
-          							"Script": "/shake Lex.Sydney_Sydney 8/pause 500/message \"{{i18n: Movie.Horror.script}}\"",
-         							"Text": "{{i18n:Movie.Horror.script.02}}",
-        							},
-        						"AfterMovie": {
-          							"ResponsePoint": null,
-          							"Script": "",
-          							"Text": "{{i18n:Movie.Horror.end}}"
-        							},
-							"ID": "reaction_1"
-      							}
-      						},
-
-      						{
-        		   			"Tag": "family",
-        		   			"Response": "dislike",
-        		   			"Whitelist": [],
-        		   			"SpecialResponses": {
-          						"BeforeMovie": {
-            							"ResponsePoint": null,
-            							"Script": "",
-            							"Text":  "{{i18n:Movie.Family.start}}",
-          							},
-          						"DuringMovie": {
-            							"ResponsePoint": null,
-            							"Script": "",
-            							"Text": "{{i18n:Movie.Family.script}}",
-          							},
-          						"AfterMovie": {
-            							"ResponsePoint": null,
-            							"Script": "",
-            							"Text": "{{i18n:Movie.Family.end}}"
-          							},
-							"ID": "reaction_2"
-      							}
-      						},
-
-      						{
-        		   			"Tag": "comedy",
-        		   			"Response": "like",
-        		   			"Whitelist": [],
-        		   			"SpecialResponses": {
-          						"BeforeMovie": {
-            							"ResponsePoint": null,
-            							"Script": "",
-            							"Text": "{{i18n:Movie.Comedy.start}}",
-          							},
-          						"DuringMovie": {
-            							"ResponsePoint": null,
-            							"Script": "/message \"{{i18n: Movie.Comedy.script.01}}\"",
-            							"Text": "{{i18n:Movie.Comedy.script.02}}",
-          							},
-          						"AfterMovie": {
-            							"ResponsePoint": null,
-            							"Script": "",
-            							"Text": "{{i18n:Movie.Comedy.end}}"
-          							},
-							"ID": "reaction_3"
-      							}
-      						},
-
-      						{
-        		   			"Tag": "romance",
-        		   			"Response": "love",
-        		   			"Whitelist": [],
-        		   			"SpecialResponses": {
-          		   				"BeforeMovie": {
-            							"ResponsePoint": null,
-            							"Script": "",
-            							"Text": "{{i18n:Movie.Romance.start}}",
-          							},
-          						"DuringMovie": {
-            							"ResponsePoint": null,
-            							"Script": "/emote Lex.Sydney_Sydney 60/pause 1000/message \"{{i18n: Movie.Romance.script.01}}\"/pause 500/message \"{{i18n: Movie.Romance.script.02}}\"",
-            							"Text": "{{i18n:Movie.Romance.script.03}}",
-          							},
-          						"AfterMovie": {
-            							"ResponsePoint": null,
-            							"Script": "",
-            							"Text": "{{i18n:Movie.Romance.end}}"
-          							},
-							"ID": "reaction_4"
-      							}
-      						},
-
-      						{
-        		   			"Tag": "documentary",
-        		   			"Response": "love",
-        		   			"Whitelist": [],
-        		   			"SpecialResponses": {
-          						"BeforeMovie": {
-            							"ResponsePoint": null,
-            							"Script": "",
-            							"Text": "{{i18n:Movie.Documentary.start}}",
-          							},
-          						"DuringMovie": {
-            							"ResponsePoint": null,
-            							"Script": "",
-            							"Text": "{{i18n:Movie.Documentary.script}}",
-								},
-          						"AfterMovie": {
-            							"ResponsePoint": null,
-            							"Script": "",
-            							"Text": "{{i18n:Movie.Documentary.end}}"
-          							},
-							"ID": "reaction_5"
-      							}
-      						},
-
-      						{
-        		   			"Tag": "classic",
-        		   			"Response": "dislike",
-        		   			"Whitelist": [],
-        		   			"SpecialResponses": {
-          						"BeforeMovie": {
-            							"ResponsePoint": null,
-            							"Script": "",
-            							"Text": "{{i18n:Movie.Classic.start}}",
-          							},
-          						"DuringMovie": {
-            							"ResponsePoint": null,
-            							"Script": "",
-            							"Text": "{{i18n:Movie.Classic.script}}",
-          							},
-          						"AfterMovie": {
-            							"ResponsePoint": null,
-            							"Script": "",
-            							"Text": "{{i18n:Movie.Classic.end}}"
-								},
-							"ID": "reaction_6"
-          						}
-       						}
-     					]
+		//Basic NPC initialization
+		{
+			"LogName": "Character Initialization",
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"Entries": {
+				"Lex.Sydney_Sydney": {
+					"DisplayName": "{{i18n:DisplayName.Sydney}}",
+					"Manner": "Polite",
+					"SocialAnxiety": "Shy",
+					"Optimism": "Negative",
+					"BirthSeason": "summer",
+					"BirthDay": 27,
+					"HomeRegion": "Town",
+					"CanBeRomanced": true,
+					"SpouseAdopts": true,
+					"SpouseRoom": {
+						"MapAsset": "Lex.Sydney_SpouseRoom"
+					},
+					"SpousePatio": {
+						"MapAsset": "Lex.Sydney_SpousePatio"
+					},
+					"WinterStarGifts": [
+						{
+							"RandomItemID": [
+								"(O)341, (O)921, (O)156, (O)645, (O)787, (O)433, (O)499"
+							]
+						}
+					],
+					"Home": [
+						{
+							"ID": "Lex.Sydney_Home",
+							"Location": "Lex.Sydney_sydHouse",
+							"Tile": {
+								"X": 13,
+								"Y": 11
+							},
+							"Direction": "Right"
+						}
+					]
 				}
-  			}
+			}
+		},
+		{
+			"LogName": "Gift Taste Data",
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Entries": {
+				"Lex.Sydney_Sydney": "{{i18n:Gift.Taste.Love}}/797 212 921 905 156 610/{{i18n:Gift.Taste.Like}}/149 348 342 227 228 242 62 66 88 394 787 154 155 834/{{i18n:Gift.Taste.Dislike}}/216 238 257 18 22 393/{{i18n:Gift.Taste.Hate}}/307 330 16 416 459 270 271 152 220 420/{{i18n:Gift.Taste.Neutral}}/143/"
+			}
+		},
+		//NPC Image Asset Initialization
+		{
+			"Action": "Load",
+			"Target": "Characters/Lex.Sydney_Sydney",
+			"FromFile": "assets/CharacterFiles/OverworldSprites/Sydney_Sprites.png"
+		},
+		{
+			"Action": "Load",
+			"Target": "Portraits/Lex.Sydney_Sydney",
+			"FromFile": "assets/characterFiles/portraits/Sydney_Portraits.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Lex.Sydney_Sydney",
+			"FromFile": "assets/characterFiles/overworldSprites/Sydney_Sprites_Flower.png",
+			"When": {
+				"DayEvent": "flower dance",
+				"LocationName": "Forest, temp"
+			},
+			"Update": "OnLocationChange"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Lex.Sydney_Sydney",
+			"FromFile": "assets/characterFiles/overworldSprites/Sydney_Sprites_Spirit.png",
+			"When": {
+				"DayEvent": "spirit's eve",
+				"LocationName": "Town, temp"
+			},
+			"Update": "OnLocationChange"
+		},
+		//Animations
+		{
+			"LogName": "Sydney Animation Data",
+			"Action": "EditData",
+			"Target": "Data/animationdescriptions",
+			"Entries": {
+				"Sydney_lex_notes": "16/16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 17 17 18 17 18 17 18 17 18 17 18 17 18 17 18 17 18 16 16 16 16 16 16 16 16 17 18 17 18 17 18 17 18 17 18/16"
+			}
+		},
+		//Dialogue & Schedule Initialization
+		{
+			"Action": "Load",
+			"Target": "Characters/Dialogue/Lex.Sydney_Sydney",
+			"FromFile": "data/characterData/dialogue/dialogue.json"
+		},
+		{
+			"Action": "Load",
+			"Target": "Characters/Dialogue/MarriageDialogueSydney",
+			"FromFile": "data/characterData/dialogue/marriageDialogue.json"
+		},
+		{
+			"LogName": "Sydney Schedule Load",
+			"Action": "Load",
+			"Target": "Characters/Schedules/Lex.Sydney_Sydney",
+			"FromFile": "data/characterData/schedule/schedule.json"
+		},
+		//Dialogue Adjustments 
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Lex.Sydney_Sydney",
+			"Entries": {
+				"summer_19": "{{i18n:dialogue.adjustment.summer_19}}",
+				"summer_20": "{{i18n:dialogue.adjustment.summer_20}}"
+			},
+			"When": {
+				"HasSeenEvent": "Lex.Sydney_Heart6"
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Lex.Sydney_Sydney",
+			"Entries": {
+				"Saloon8": "{{i18n:dialogue.adjustment.saloon8}}"
+			},
+			"When": {
+				"Relationship:Lex.Sydney_Sydney": "Dating, Engaged"
+			}
+		},
+		//Wedding & Marriage Data
+		{
+			"LogName": "Sydney Wedding Data",
+			"Action": "EditData",
+			"Target": "strings/StringsFromCSFiles",
+			"Entries": {
+				"Utility.cs.5367": "{{i18n:wedding.5367}}",
+				"Utility.cs.5369": "{{i18n:wedding.5369}}",
+				"Utility.cs.5371": "{{i18n:wedding.5371}}",
+				"Utility.cs.5377": "{{i18n:wedding.5377}}"
+			},
+			"When": {
+				"Relationship:Lex.Sydney_Sydney": "Engaged"
+			}
+		},
+		{
+			"LogName": "Sydney Engagement Dialogue Data",
+			"Action": "EditData",
+			"Target": "Data/EngagementDialogue",
+			"Entries": {
+				"Lex.Sydney_Sydney0": "{{i18n:engagement.00}}",
+				"Lex.Sydney_Sydney1": "{{i18n:engagement.01}}"
+			}
+		},
+		{
+			"LogName": "Sydney Pregnancy/Adoption Dialogue Data One",
+			"Action": "EditData",
+			"Target": "strings/StringsFromCSFiles",
+			"Entries": {
+				"NPC.cs.4440": "{{i18n:Sydney_Pregnancy_Adoption_One.4440}}",
+				"NPC.cs.4443": "{{i18n:Sydney_Pregnancy_Adoption_One.4443}}",
+				"NPC.cs.4445": "{{i18n:Sydney_Pregnancy_Adoption_One.4445}}"
+			},
+			"When": {
+				"Relationship:Lex.Sydney_Sydney": "Married",
+				"HavingChild": "{{spouse}}"
+			}
+		},
+		//Movie Concession Data
+		{
+			"LogName": "Sydney Concession Data",
+			"Action": "EditData",
+			"Target": "Data/ConcessionTastes",
+			"Entries": {
+				"Lex.Sydney_Sydney": {
+					"Name": "Sydney",
+					"LovedTags": [
+						"Salty",
+						"Sour",
+						"Nachos",
+						"Salted Peanuts"
+					],
+					"LikedTags": [
+						"Drink",
+						"popcorn",
+						"Personal Pizza"
+					],
+					"DislikedTags": [
+						"Burger",
+						"Candy",
+						"Ice Cream Sandwich",
+						"Black Licorice"
+					]
+				}
+			}
+		},
+		//Movie Reaction Data
+		{
+			"LogName": "Sydney Movie Reaction Data",
+			"Action": "EditData",
+			"Target": "Data/MoviesReactions",
+			"Entries": {
+				"Lex.Sydney_Sydney": {
+					"NPCName": "Sydney",
+					"Reactions": [
+						{
+							"Tag": "sci-fi",
+							"Response": "like",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.SciFi.start}}"
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.SciFi.script}}"
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.SciFi.end}}"
+								},
+								"ID": "reaction_0"
+							}
+						},
+						{
+							"Tag": "horror",
+							"Response": "love",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Horror.start}}"
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "/shake Lex.Sydney_Sydney 8/pause 500/message \"{{i18n: Movie.Horror.script}}\"",
+									"Text": "{{i18n:Movie.Horror.script.02}}"
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Horror.end}}"
+								},
+								"ID": "reaction_1"
+							}
+						},
+						{
+							"Tag": "family",
+							"Response": "dislike",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Family.start}}"
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Family.script}}"
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Family.end}}"
+								},
+								"ID": "reaction_2"
+							}
+						},
+						{
+							"Tag": "comedy",
+							"Response": "like",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Comedy.start}}"
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "/message \"{{i18n: Movie.Comedy.script.01}}\"",
+									"Text": "{{i18n:Movie.Comedy.script.02}}"
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Comedy.end}}"
+								},
+								"ID": "reaction_3"
+							}
+						},
+						{
+							"Tag": "romance",
+							"Response": "love",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Romance.start}}"
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "/emote Lex.Sydney_Sydney 60/pause 1000/message \"{{i18n: Movie.Romance.script.01}}\"/pause 500/message \"{{i18n: Movie.Romance.script.02}}\"",
+									"Text": "{{i18n:Movie.Romance.script.03}}"
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Romance.end}}"
+								},
+								"ID": "reaction_4"
+							}
+						},
+						{
+							"Tag": "documentary",
+							"Response": "love",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Documentary.start}}"
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Documentary.script}}"
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Documentary.end}}"
+								},
+								"ID": "reaction_5"
+							}
+						},
+						{
+							"Tag": "classic",
+							"Response": "dislike",
+							"Whitelist": [],
+							"SpecialResponses": {
+								"BeforeMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Classic.start}}"
+								},
+								"DuringMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Classic.script}}"
+								},
+								"AfterMovie": {
+									"ResponsePoint": null,
+									"Script": "",
+									"Text": "{{i18n:Movie.Classic.end}}"
+								},
+								"ID": "reaction_6"
+							}
+						}
+					]
+				}
+			}
 		}
 	]
 }
