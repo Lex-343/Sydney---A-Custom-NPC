@@ -1,12 +1,6 @@
 {
 	"Format": "2.0.0",
 	//If you have any questions just ping me in discord in #making-mods or something. Good luck with whatever it is that you're doing!
-	"DynamicTokens": [
-		{
-			"Name": "Lex.Sydney",
-			"Value": "Lex.Sydney"
-		}
-	],
 	"Changes": [
 		//Loading empty jsons to edit for events at custom locations
 		{
