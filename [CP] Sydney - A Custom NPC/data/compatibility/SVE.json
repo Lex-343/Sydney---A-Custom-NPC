@@ -1,127 +1,142 @@
 {
 	"Changes": [
-	//Patches for Custom_BlueMoonVineyard
-	{
-		"Action": "EditMap",
-		"Target": "maps/Custom_BlueMoonVineyard",
-		"MapTiles": [
-			{
-				"Position": { "X": 56, "Y": 61 },
-				"Layer": "Back",
-				"SetProperties": {
-					"TouchAction": "LoadMap Lex.Sydney_sydBeach 0 5 1"
+		//Patches for Custom_BlueMoonVineyard
+		{
+			"Action": "EditMap",
+			"Target": "maps/Custom_BlueMoonVineyard",
+			"MapTiles": [
+				{
+					"Position": {
+						"X": 56,
+						"Y": 61
+					},
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "LoadMap Lex.Sydney_sydBeach 0 5 1"
+					}
 				}
-			}
-		]
-	},
-
-	{
-		"Action": "EditMap",
-		"Target": "maps/Custom_BlueMoonVineyard",
-		"MapTiles": [
-			{
-				"Position": { "X": 56, "Y": 62 },
-				"Layer": "Back",
-				"SetProperties": {
-					"TouchAction": "LoadMap Lex.Sydney_sydBeach 0 5 1"
+			]
+		},
+		{
+			"Action": "EditMap",
+			"Target": "maps/Custom_BlueMoonVineyard",
+			"MapTiles": [
+				{
+					"Position": {
+						"X": 56,
+						"Y": 62
+					},
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "LoadMap Lex.Sydney_sydBeach 0 5 1"
+					}
 				}
-			}
-		]
-	},
-
-	{
-		"Action": "EditMap",
-		"Target": "maps/Custom_BlueMoonVineyard",
-		"MapTiles": [
-			{
-				"Position": { "X": 56, "Y": 63 },
-				"Layer": "Back",
-				"SetProperties": {
-					"TouchAction": "LoadMap Lex.Sydney_sydBeach 0 6 1"
+			]
+		},
+		{
+			"Action": "EditMap",
+			"Target": "maps/Custom_BlueMoonVineyard",
+			"MapTiles": [
+				{
+					"Position": {
+						"X": 56,
+						"Y": 63
+					},
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "LoadMap Lex.Sydney_sydBeach 0 6 1"
+					}
 				}
-			}
-		]
-	},
-
-	{
-		"Action": "EditMap",
-		"Target": "maps/Custom_BlueMoonVineyard",
-		"MapTiles": [
-			{
-				"Position": { "X": 56, "Y": 64 },
-				"Layer": "Back",
-				"SetProperties": {
-					"TouchAction": "LoadMap Lex.Sydney_sydBeach 0 6 1"
+			]
+		},
+		{
+			"Action": "EditMap",
+			"Target": "maps/Custom_BlueMoonVineyard",
+			"MapTiles": [
+				{
+					"Position": {
+						"X": 56,
+						"Y": 64
+					},
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "LoadMap Lex.Sydney_sydBeach 0 6 1"
+					}
 				}
-			}
-		]
-	},
-
-	//Patches for Beach
-	{
-		"Action": "EditMap",
-		"Target": "maps/Beach",
-		"MapTiles": [
-			{
-				"Position": { "X": 0, "Y": 4 },
-				"Layer": "Back",
-				"SetProperties": {
-					"TouchAction": "LoadMap Lex.Sydney_sydBeach 44 5 3"
+			]
+		},
+		//Patches for Beach
+		{
+			"Action": "EditMap",
+			"Target": "maps/Beach",
+			"MapTiles": [
+				{
+					"Position": {
+						"X": 0,
+						"Y": 4
+					},
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "LoadMap Lex.Sydney_sydBeach 44 5 3"
+					}
 				}
-			}
-		]
-	},
-
-	{
-		"Action": "EditMap",
-		"Target": "maps/Beach",
-		"MapTiles": [
-			{
-				"Position": { "X": 0, "Y": 5 },
-				"Layer": "Back",
-				"SetProperties": {
-					"TouchAction": "LoadMap Lex.Sydney_sydBeach 44 5 3"
+			]
+		},
+		{
+			"Action": "EditMap",
+			"Target": "maps/Beach",
+			"MapTiles": [
+				{
+					"Position": {
+						"X": 0,
+						"Y": 5
+					},
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "LoadMap Lex.Sydney_sydBeach 44 5 3"
+					}
 				}
-			}
-		]
-	},
-
-	{
-		"Action": "EditMap",
-		"Target": "maps/Beach",
-		"MapTiles": [
-			{
-				"Position": { "X": 0, "Y": 6 },
-				"Layer": "Back",
-				"SetProperties": {
-					"TouchAction": "LoadMap Lex.Sydney_sydBeach 44 5 3"
+			]
+		},
+		{
+			"Action": "EditMap",
+			"Target": "maps/Beach",
+			"MapTiles": [
+				{
+					"Position": {
+						"X": 0,
+						"Y": 6
+					},
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "LoadMap Lex.Sydney_sydBeach 44 5 3"
+					}
 				}
-			}
-		]
-	},
-
-	{
-		"Action": "EditMap",
-		"Target": "maps/Beach",
-		"MapTiles": [
-			{
-				"Position": { "X": 0, "Y": 7 },
-				"Layer": "Back",
-				"SetProperties": {
-					"TouchAction": "LoadMap Lex.Sydney_sydBeach 44 5 3"
+			]
+		},
+		{
+			"Action": "EditMap",
+			"Target": "maps/Beach",
+			"MapTiles": [
+				{
+					"Position": {
+						"X": 0,
+						"Y": 7
+					},
+					"Layer": "Back",
+					"SetProperties": {
+						"TouchAction": "LoadMap Lex.Sydney_sydBeach 44 5 3"
+					}
 				}
-			}
-		]
-	},
-
-	//Patches for Lex.Sydney_sydBeach
-	{
-		"Action": "EditMap",
-		"Target": "maps/Lex.Sydney_sydBeach",
-		"MapProperties": {
-			"Warp": "45 4 Beach 1 4 45 5 Beach 1 5 45 6 Beach 1 6 -1 4 Custom_BlueMoonVineyard 56 62 -1 5 Custom_BlueMoonVineyard 56 62 -1 6 Custom_BlueMoonVineyard 56 63 -1 7 Custom_BlueMoonVineyard 56 63 -1 8 Custom_BlueMoonVineyard 56 64 -1 8 Custom_BlueMoonVineyard 56 64 -1 9 Custom_BlueMoonVineyard 56 64"
+			]
+		},
+		//Patches for Lex.Sydney_sydBeach
+		{
+			"Action": "EditMap",
+			"Target": "maps/Custom_sydBeach",
+			"MapProperties": {
+				"Warp": "45 4 Beach 1 4 45 5 Beach 1 5 45 6 Beach 1 6 -1 4 Custom_BlueMoonVineyard 56 62 -1 5 Custom_BlueMoonVineyard 56 62 -1 6 Custom_BlueMoonVineyard 56 63 -1 7 Custom_BlueMoonVineyard 56 63 -1 8 Custom_BlueMoonVineyard 56 64 -1 8 Custom_BlueMoonVineyard 56 64 -1 9 Custom_BlueMoonVineyard 56 64"
 			}
 		}
 	]
 }
-

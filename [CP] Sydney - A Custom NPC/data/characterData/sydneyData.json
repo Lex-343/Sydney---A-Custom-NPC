@@ -16,6 +16,9 @@
 					"HomeRegion": "Town",
 					"CanBeRomanced": true,
 					"SpouseAdopts": true,
+					"FormerCharacterNames": [
+						"SydneyLex"
+					],
 					"SpouseRoom": {
 						"MapAsset": "Lex.Sydney_SpouseRoom"
 					},
